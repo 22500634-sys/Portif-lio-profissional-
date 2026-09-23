@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Paulo Ferreira Lima | Portfólio T.I</title>
+  
+  <!-- Fontes do Google e Ícones do FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas interativo para teia de conexões de rede em JS -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Menu Navegação Glassmorphism -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-bracket">&lt;</span>JP<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about"><i class="fa-solid fa-user"></i> Sobre</a></li>
+      <li><a href="#skills"><i class="fa-solid fa-code"></i> Habilidades</a></li>
+      <li><a href="#timeline"><i class="fa-solid fa-graduation-cap"></i> Formação</a></li>
+      <li><a href="#awards"><i class="fa-solid fa-trophy"></i> Prêmios</a></li>
+      <li><a href="#terminal-section"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+      <li><a href="#contact" class="btn-nav"><i class="fa-solid fa-envelope"></i> Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge-status">
+        <span class="status-dot"></span> Disponível para Oportunidades & Estágios T.I
+      </div>
+      <h1 class="hero-title">João Paulo <span class="gradient-text">Ferreira Lima</span></h1>
+      <p class="hero-subtitle">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </p>
+      
+      <div class="hero-info">
+        <span><i class="fa-solid fa-cake-candles"></i> 16 Anos</span>
+        <span><i class="fa-solid fa-location-dot"></i> Santa Amélia, Belo Horizonte - MG</span>
+        <span><i class="fa-solid fa-school"></i> Técnico em Informática (Cotemig)</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Entrar em Contato</a>
+        <a href="#skills" class="btn btn-secondary"><i class="fa-solid fa-layer-group"></i> Ver Competências</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre / Perfil -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-user-gear"></i> Perfil Profissional</h2>
+      <div class="about-grid">
+        <div class="about-card glass">
+          <h3><i class="fa-solid fa-bullseye"></i> Sobre Mim</h3>
+          <p>
+            Estudante do curso Técnico em Informática no <strong>Colégio Cotemig Floresta</strong>. Possuo sólida base prática em <strong>manutenção de computadores</strong>, <strong>instalação de sistemas operacionais (Windows e Linux)</strong>, <strong>configuração de redes de computadores</strong> e administração de ferramentas de produtividade em nuvem.
+          </p>
+        </div>
+        <div class="about-card glass">
+          <h3><i class="fa-solid fa-brain"></i> Habilidades Comportamentais</h3>
+          <ul class="soft-skills-list">
+            <li><i class="fa-solid fa-circle-check"></i> Boa Comunicação</li>
+            <li><i class="fa-solid fa-circle-check"></i> Trabalho em Equipe</li>
+            <li><i class="fa-solid fa-circle-check"></i> Proatividade</li>
+            <li><i class="fa-solid fa-circle-check"></i> Resolução de Problemas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Técnicas com Filtros Interativos em JS -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Competências Técnicas</h2>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="hardware">Hardware & SO</button>
+        <button class="filter-btn" data-filter="networks">Redes & Roteamento</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & Produtividade</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Hardware / SO -->
+        <div class="skill-card glass" data-category="hardware">
+          <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h4>Manutenção de Computadores</h4>
+          <p>Manutenção preventiva e corretiva de PCs e notebooks.</p>
+        </div>
+        <div class="skill-card glass" data-category="hardware">
+          <div class="skill-icon"><i class="fa-brands fa-windows"></i></div>
+          <h4>Sistemas Operacionais</h4>
+          <p>Instalação e parametrização avançada de Windows e Linux.</p>
+        </div>
+
+        <!-- Redes -->
+        <div class="skill-card glass" data-category="networks">
+          <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h4>Redes LAN & Wi-Fi</h4>
+          <p>Configuração, organização e estruturação de redes locais e Wi-Fi.</p>
+        </div>
+        <div class="skill-card glass" data-category="networks">
+          <div class="skill-icon"><i class="fa-solid fa-wifi"></i></div>
+          <h4>Roteadores & Switches</h4>
+          <p>Configuração, mapeamento de IP e roteamento de switches e roteadores.</p>
+        </div>
+
+        <!-- Cloud & Produtividade -->
+        <div class="skill-card glass" data-category="cloud">
+          <div class="skill-icon"><i class="fa-brands fa-google"></i></div>
+          <h4>Google Workspace</h4>
+          <p>Administração de ferramentas Google, Google Forms e Google Calendar.</p>
+        </div>
+        <div class="skill-card glass" data-category="cloud">
+          <div class="skill-icon"><i class="fa-solid fa-file-excel"></i></div>
+          <h4>Microsoft Office</h4>
+          <p>Domínio prático em Microsoft Word, Excel e PowerPoint.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline de Formação -->
+  <section id="timeline" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Formação & Cursos</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content glass">
+            <span class="timeline-date">Fevereiro/2024 - Março/2026</span>
+            <h3>Ensino Médio e Técnico em Informática</h3>
+            <h4>Colégio Cotemig Floresta (Turno Tarde)</h4>
+            <p>Cursando o 2º ano. Formação focada em informática técnica, desenvolvimento e redes.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content glass">
+            <span class="timeline-date">2024</span>
+            <h3>Curso de Conscientização Digital</h3>
+            <h4>Cisco Networking Academy</h4>
+            <p>Capacitação em segurança da informação, privacidade na internet e boas práticas de T.I.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content glass">
+            <span class="timeline-date">Em Andamento</span>
+            <h3>Curso de Inglês (Nível Médio)</h3>
+            <h4>Asap Plus Escola de Idiomas</h4>
+            <p>Aprimoramento do idioma focado em comunicação e leitura técnica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prêmios e Reconhecimentos -->
+  <section id="awards" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Prêmios & Conquistas</h2>
+      <div class="awards-grid">
+        <div class="award-card glass">
+          <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
+          <span class="award-year">2022</span>
+          <h3>Medalha de Bronze em Ciências</h3>
+          <p>Grande Olimpíada Acadêmica (GOA)</p>
+        </div>
+        <div class="award-card glass">
+          <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+          <span class="award-year">2019</span>
+          <h3>Menção Honrosa em Ed. Física</h3>
+          <p>Coleguium</p>
+        </div>
+        <div class="award-card glass">
+          <div class="award-icon"><i class="fa-solid fa-star"></i></div>
+          <span class="award-year">2018</span>
+          <h3>Aluno Destaque</h3>
+          <p>Colégio Tiradentes da Polícia Militar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terminal Interativo Simulador de T.I em JavaScript -->
+  <section id="terminal-section" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-terminal"></i> Terminal Interativo T.I</h2>
+      <div class="terminal-window glass">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">joaopaulo@cotemig-sys:~</div>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-msg">Bem-vindo ao sistema de João Paulo! Digite <span class="highlight">'help'</span> para listar os comandos disponíveis.</p>
+          <div id="terminal-output"></div>
+          <div class="terminal-input-line">
+            <span class="prompt">joaopaulo@sys:~$</span>
+            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Digite um comando...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> Contato Direto</h2>
+      <div class="contact-grid">
+        <div class="contact-info glass">
+          <h3>Informações de Contato</h3>
+          
+          <div class="contact-item" onclick="copyToClipboard('joao.p.f.lima@icloud.com', 'E-mail copiado!')">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>E-mail</strong>
+              <p>joao.p.f.lima@icloud.com</p>
+            </div>
+            <button class="btn-copy" title="Copiar E-mail"><i class="fa-regular fa-copy"></i></button>
+          </div>
+
+          <div class="contact-item" onclick="copyToClipboard('(31) 98576-2045', 'Telefone copiado!')">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Telefone / WhatsApp</strong>
+              <p>(31) 98576-2045</p>
+            </div>
+            <button class="btn-copy" title="Copiar Telefone"><i class="fa-regular fa-copy"></i></button>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Endereço</strong>
+              <p>Rua Deputado Salim Nacur, 173, ap. 701 bloco 2, Santa Amélia - Belo Horizonte/MG (CEP 31.555-190)</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass" id="contactForm">
+          <h3>Enviar Mensagem</h3>
+          <div class="input-group">
+            <input type="text" id="formName" required placeholder="Seu Nome">
+          </div>
+          <div class="input-group">
+            <input type="email" id="formEmail" required placeholder="Seu E-mail">
+          </div>
+          <div class="input-group">
+            <textarea id="formMessage" rows="4" required placeholder="Sua Mensagem..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notificação Toast -->
+  <div id="toast" class="toast">Texto copiado!</div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 João Paulo Ferreira Lima. Todos os direitos reservados. Desenvolvido para Visual Studio Code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
